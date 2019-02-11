@@ -19,6 +19,7 @@ namespace deviceDetectWF
             labelVersion.Text = Resources.TextResources.AboutVersion + fvi.FileVersion;
             labelAppName.Text = Resources.TextResources.ProgramTitle;
             labelCopyright.Text = Resources.TextResources.AboutCopyright;
+            pictureBox1.Image = Resources.Images.IconPNG;
         }
 
         private void panel1_DoubleClick(object sender, EventArgs e)

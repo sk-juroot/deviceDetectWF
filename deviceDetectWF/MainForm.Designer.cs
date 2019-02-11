@@ -140,21 +140,21 @@
             // showHowToToolStripMenuItem
             // 
             this.showHowToToolStripMenuItem.Name = "showHowToToolStripMenuItem";
-            this.showHowToToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.showHowToToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.showHowToToolStripMenuItem.Text = "How To";
             this.showHowToToolStripMenuItem.Click += new System.EventHandler(this.ShowHowTo);
             // 
             // projectSourceToolStripMenuItem
             // 
             this.projectSourceToolStripMenuItem.Name = "projectSourceToolStripMenuItem";
-            this.projectSourceToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.projectSourceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.projectSourceToolStripMenuItem.Text = "Project so&urce";
             this.projectSourceToolStripMenuItem.Click += new System.EventHandler(this.OpenSourceSite);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutToolStripMenuItem.Text = "Ab&out";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.ShowAboutDialog);
             // 
@@ -220,6 +220,7 @@
             this.Name = "MainForm";
             this.Text = "DeviceDetectWF";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.MainMenu.ResumeLayout(false);
             this.MainMenu.PerformLayout();
             this.StatusBar.ResumeLayout(false);

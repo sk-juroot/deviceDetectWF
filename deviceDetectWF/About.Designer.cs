@@ -58,7 +58,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::deviceDetectWF.Properties.Resources.iconfinder_BT_usb_90554;
             this.pictureBox1.Location = new System.Drawing.Point(-69, -42);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(308, 285);

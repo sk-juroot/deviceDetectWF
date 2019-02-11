@@ -22,6 +22,7 @@ namespace deviceDetectWF
             SnapshotsList.DataSource = Snapshots;
             SnapshotsList.DisplayMember = "Name";
             SnapshotsList.ValueMember = "Id";
+            Icon = Resources.Images.Icon;
             SetStatus(Resources.Statuses.Ready);
             ShowHowTo(this, null);
         }
@@ -187,6 +188,11 @@ namespace deviceDetectWF
         private void OpenSourceSite(object sender, EventArgs e)
         {
             Process.Start(Resources.TextResources.OpenSourceURL);
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
