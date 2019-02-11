@@ -1,0 +1,11 @@
+{
+  "ServerUri": "http://localhost:9000/",
+  "Organization": null,
+  "ProjectKey": "deviceDetectWF",
+  "Profiles": {
+    "CSharp": {
+      "ProfileKey": "AWjaFqGhG3Q9SAUN1kv2",
+      "ProfileTimestamp": "2019-02-11T02:05:42+01:00"
+    }
+  }
+}

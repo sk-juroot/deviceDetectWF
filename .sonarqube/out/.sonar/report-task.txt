@@ -1,0 +1,6 @@
+projectKey=deviceDetectWF
+serverUrl=http://localhost:9000
+serverVersion=7.6.0.21501
+dashboardUrl=http://localhost:9000/dashboard?id=deviceDetectWF
+ceTaskId=AWjbmmstH0nxQTBLN3Os
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AWjbmmstH0nxQTBLN3Os

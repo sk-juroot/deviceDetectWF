@@ -1,0 +1,1 @@
+f:\Dev\deviceDetectWF\.sonarqube\out\0

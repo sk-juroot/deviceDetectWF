@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
+  <ProjectName>deviceDetectWF</ProjectName>
+  <ProjectLanguage>C#</ProjectLanguage>
+  <ProjectType>Product</ProjectType>
+  <ProjectGuid>60e0725a-5352-42d2-8672-4991ea024624</ProjectGuid>
+  <FullPath>f:\Dev\deviceDetectWF\deviceDetectWF\deviceDetectWF.csproj</FullPath>
+  <IsExcluded>false</IsExcluded>
+  <AnalysisResults>
+    <AnalysisResult Id="FilesToAnalyze" Location="f:\Dev\deviceDetectWF\.sonarqube\out\0\FilesToAnalyze.txt" />
+  </AnalysisResults>
+  <AnalysisSettings>
+    <Property Name="sonar.cs.roslyn.reportFilePath">f:\Dev\deviceDetectWF\deviceDetectWF\bin\Release\deviceDetectWF.exe.RoslynCA.json|f:\Dev\deviceDetectWF\deviceDetectWF\bin\Release\deviceDetectWF.exe.RoslynCA.json</Property>
+    <Property Name="sonar.cs.analyzer.projectOutPath">f:\Dev\deviceDetectWF\.sonarqube\out\0</Property>
+  </AnalysisSettings>
+  <Configuration>Release</Configuration>
+  <Platform>AnyCPU</Platform>
+</ProjectInfo>
