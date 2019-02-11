@@ -16,12 +16,14 @@ namespace deviceDetectWF
         {
             System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
             FileVersionInfo fvi = FileVersionInfo.GetVersionInfo(assembly.Location);
-            labelVersion.Text = "version " + fvi.FileVersion;
+            labelVersion.Text = Resources.TextResources.AboutVersion + fvi.FileVersion;
+            labelAppName.Text = Resources.TextResources.ProgramTitle;
+            labelCopyright.Text = Resources.TextResources.AboutCopyright;
         }
 
         private void panel1_DoubleClick(object sender, EventArgs e)
         {
-            string decodedString = Encoding.ASCII.GetString(Convert.FromBase64String("aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1wQWduSkRKTjRWQQ=="));
+            string decodedString = Encoding.ASCII.GetString(Convert.FromBase64String(Resources.TextResources.DeviceDetectWF));
             Process.Start(decodedString);
         }
 

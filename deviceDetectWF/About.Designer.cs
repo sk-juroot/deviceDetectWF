@@ -31,7 +31,7 @@
             this.labelAppName = new System.Windows.Forms.Label();
             this.labelVersion = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelCopyright = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -66,14 +66,14 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // label1
+            // labelCopyright
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(64, 195);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "© Grecnar.sk, 2019";
+            this.labelCopyright.AutoSize = true;
+            this.labelCopyright.Location = new System.Drawing.Point(64, 195);
+            this.labelCopyright.Name = "labelCopyright";
+            this.labelCopyright.Size = new System.Drawing.Size(101, 13);
+            this.labelCopyright.TabIndex = 3;
+            this.labelCopyright.Text = "© Grecnar.sk, 2019";
             // 
             // panel1
             // 
@@ -90,7 +90,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(250, 240);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelCopyright);
             this.Controls.Add(this.labelVersion);
             this.Controls.Add(this.labelAppName);
             this.Controls.Add(this.pictureBox1);
@@ -116,7 +116,7 @@
         private System.Windows.Forms.Label labelAppName;
         private System.Windows.Forms.Label labelVersion;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelCopyright;
         private System.Windows.Forms.Panel panel1;
     }
 }

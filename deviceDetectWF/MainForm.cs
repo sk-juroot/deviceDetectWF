@@ -22,7 +22,7 @@ namespace deviceDetectWF
             SnapshotsList.DataSource = Snapshots;
             SnapshotsList.DisplayMember = "Name";
             SnapshotsList.ValueMember = "Id";
-            SetStatus("Ready");
+            SetStatus(Resources.Statuses.Ready);
             ShowHowTo(this, null);
         }
 
@@ -40,12 +40,12 @@ namespace deviceDetectWF
         {
             base.WndProc(ref m);
              if (running && (m.WParam.ToInt32() == 0x7))     // WParam 0x7 = some hw has changed message
-                GetDevicesList("Device change");
+                GetDevicesList(Resources.TextResources.WParam0x7);
         }
 
         private void GetDevicesList(string eventType)
         {
-            SetStatus(eventType + " [running]");
+            SetStatus(eventType);
             ManagementObjectSearcher searcher = new ManagementObjectSearcher("Select * from Win32_PnpEntity");
             Thread thread = new Thread(new ThreadStart(() =>
             {
@@ -59,13 +59,13 @@ namespace deviceDetectWF
                     try {
                         deviceName = devices.GetPropertyValue("Name").ToString();
                     } catch {
-                        deviceName = "Unknown device";
+                        deviceName = Resources.TextResources.UnknownDevice;
                     }
 
                     try {
                         deviceID = devices.GetPropertyValue("DeviceID").ToString();
                     } catch {
-                        deviceID = "Unknown ID";
+                        deviceID = Resources.TextResources.UnknownId;
                     }
 
                     currentList.Devices.Add(new DeviceEntry { DeviceId = deviceID, DeviceName = deviceName });
@@ -85,7 +85,7 @@ namespace deviceDetectWF
         {
             if (running)
                 Snapshots.ResetBindings();
-            SetStatus("Snapshot captured");
+            SetStatus(Resources.Statuses.SnapshotCaptured);
         }
 
         private void StartListener(object sender, EventArgs e)
@@ -94,14 +94,14 @@ namespace deviceDetectWF
             startToolStripMenuItem.ShowShortcutKeys = false;
             stopToolStripMenuItem.Enabled = true;
             stopToolStripMenuItem.ShowShortcutKeys = true;
-            GetDevicesList("Start logging");
+            GetDevicesList(Resources.Statuses.StartLogging);
             this.running = true;
         }
 
         private void StopListener(object sender, EventArgs e)
         {
             running = false;
-            SetStatus("Logging stopped");
+            SetStatus(Resources.Statuses.StopLogging);
             stopToolStripMenuItem.Enabled = false;
             stopToolStripMenuItem.ShowShortcutKeys = false;
             startToolStripMenuItem.Enabled = true;
@@ -127,13 +127,13 @@ namespace deviceDetectWF
                     List<DeviceEntry> addedDevices = Snapshots[SnapshotsList.SelectedIndex].Devices.Except(Snapshots[SnapshotsList.SelectedIndex-1].Devices).ToList();
 
                     if (removedDevices.Count > 0)
-                        PopulateDevices(removedDevices, Color.Red, "REMOVED DEVICES");
+                        PopulateDevices(removedDevices, Color.Red, Resources.TextResources.LogContentRemoved);
 
                     if (addedDevices.Count > 0)
-                        PopulateDevices(addedDevices, Color.Green, "ADDED DEVICES");
+                        PopulateDevices(addedDevices, Color.Green, Resources.TextResources.LogContentAdded);
                 }
 
-                PopulateDevices(Snapshots[SnapshotsList.SelectedIndex].Devices, TextBox.ForeColor, "COMPLETE LIST OF DEVICES DETECTED");
+                PopulateDevices(Snapshots[SnapshotsList.SelectedIndex].Devices, TextBox.ForeColor, Resources.TextResources.LogContentEverything);
 
                 saveToFileToolStripMenuItem.Enabled = true;
                 copyToClipboardToolStripMenuItem.Enabled = true;
@@ -164,7 +164,7 @@ namespace deviceDetectWF
             if (SaveDialog.ShowDialog() == DialogResult.OK)
             {
                 TextBox.SaveFile(SaveDialog.OpenFile(), RichTextBoxStreamType.PlainText);
-                SetStatus("Log saved to file: " + SaveDialog.FileName);
+                SetStatus(Resources.Statuses.LogSaved + SaveDialog.FileName);
             }
         }
 
@@ -173,7 +173,7 @@ namespace deviceDetectWF
             TextBox.SelectAll();
             TextBox.Copy();
             TextBox.DeselectAll();
-            SetStatus("Log copied to clipboard");
+            SetStatus(Resources.Statuses.LogCopied);
         }
 
         private void ShowHowTo(object sender, EventArgs e)
@@ -181,13 +181,12 @@ namespace deviceDetectWF
             TextBox.Clear();
             saveToFileToolStripMenuItem.Enabled = false;
             copyToClipboardToolStripMenuItem.Enabled = false;
-            TextBox.AppendText("\nHOWTO:\n 1. Use Listener menu to start logging device changes\n 2. When listener is enabled, initial scan of devices will occur\n");
-            TextBox.AppendText(" 3. Any detected change will add new snapshot of device tree to side panel\n 4. Select any other snapshot to see complete list of devices and compare with previous snap\n\nEnjoy!");
+            TextBox.AppendText(Resources.TextResources.HowTo);
         }
 
         private void OpenSourceSite(object sender, EventArgs e)
         {
-            Process.Start("https://github.com/sk-juroot/deviceDetectWF");
+            Process.Start(Resources.TextResources.OpenSourceURL);
         }
     }
 }
