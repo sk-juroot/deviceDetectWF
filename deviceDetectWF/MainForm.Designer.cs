@@ -40,13 +40,13 @@
             this.stopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showHowToToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.projectSourceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.StatusBar = new System.Windows.Forms.StatusStrip();
             this.StatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.SnapshotsList = new System.Windows.Forms.ListBox();
             this.TextBox = new System.Windows.Forms.RichTextBox();
             this.SaveDialog = new System.Windows.Forms.SaveFileDialog();
-            this.projectSourceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainMenu.SuspendLayout();
             this.StatusBar.SuspendLayout();
             this.SuspendLayout();
@@ -78,7 +78,7 @@
             // 
             this.saveToFileToolStripMenuItem.Enabled = false;
             this.saveToFileToolStripMenuItem.Name = "saveToFileToolStripMenuItem";
-            this.saveToFileToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.saveToFileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.saveToFileToolStripMenuItem.Text = "Save to file";
             this.saveToFileToolStripMenuItem.Click += new System.EventHandler(this.SaveToFile);
             // 
@@ -86,20 +86,20 @@
             // 
             this.copyToClipboardToolStripMenuItem.Enabled = false;
             this.copyToClipboardToolStripMenuItem.Name = "copyToClipboardToolStripMenuItem";
-            this.copyToClipboardToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.copyToClipboardToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.copyToClipboardToolStripMenuItem.Text = "&Copy to clipboard";
             this.copyToClipboardToolStripMenuItem.Click += new System.EventHandler(this.CopyToClipboard);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(166, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitApplication);
             // 
@@ -115,7 +115,6 @@
             // startToolStripMenuItem
             // 
             this.startToolStripMenuItem.Name = "startToolStripMenuItem";
-            this.startToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F12;
             this.startToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.startToolStripMenuItem.Text = "&Start";
             this.startToolStripMenuItem.Click += new System.EventHandler(this.StartListener);
@@ -124,7 +123,6 @@
             // 
             this.stopToolStripMenuItem.Enabled = false;
             this.stopToolStripMenuItem.Name = "stopToolStripMenuItem";
-            this.stopToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F12;
             this.stopToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.stopToolStripMenuItem.Text = "&Stop";
             this.stopToolStripMenuItem.Click += new System.EventHandler(this.StopListener);
@@ -142,14 +140,21 @@
             // showHowToToolStripMenuItem
             // 
             this.showHowToToolStripMenuItem.Name = "showHowToToolStripMenuItem";
-            this.showHowToToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.showHowToToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.showHowToToolStripMenuItem.Text = "How To";
             this.showHowToToolStripMenuItem.Click += new System.EventHandler(this.ShowHowTo);
+            // 
+            // projectSourceToolStripMenuItem
+            // 
+            this.projectSourceToolStripMenuItem.Name = "projectSourceToolStripMenuItem";
+            this.projectSourceToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.projectSourceToolStripMenuItem.Text = "Project so&urce";
+            this.projectSourceToolStripMenuItem.Click += new System.EventHandler(this.OpenSourceSite);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.aboutToolStripMenuItem.Text = "Ab&out";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.ShowAboutDialog);
             // 
@@ -200,13 +205,6 @@
             // 
             this.SaveDialog.DefaultExt = "txt";
             this.SaveDialog.Filter = "Text Files (*.txt)|*.txt";
-            // 
-            // projectSourceToolStripMenuItem
-            // 
-            this.projectSourceToolStripMenuItem.Name = "projectSourceToolStripMenuItem";
-            this.projectSourceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.projectSourceToolStripMenuItem.Text = "Project so&urce";
-            this.projectSourceToolStripMenuItem.Click += new System.EventHandler(this.OpenSourceSite);
             // 
             // MainForm
             // 
