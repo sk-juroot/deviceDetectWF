@@ -80,7 +80,7 @@
             this.saveToFileToolStripMenuItem.Name = "saveToFileToolStripMenuItem";
             this.saveToFileToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.saveToFileToolStripMenuItem.Text = "Save to file";
-            this.saveToFileToolStripMenuItem.Click += new System.EventHandler(this.saveToFileToolStripMenuItem_Click);
+            this.saveToFileToolStripMenuItem.Click += new System.EventHandler(this.SaveToFile);
             // 
             // copyToClipboardToolStripMenuItem
             // 
@@ -88,7 +88,7 @@
             this.copyToClipboardToolStripMenuItem.Name = "copyToClipboardToolStripMenuItem";
             this.copyToClipboardToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.copyToClipboardToolStripMenuItem.Text = "&Copy to clipboard";
-            this.copyToClipboardToolStripMenuItem.Click += new System.EventHandler(this.copyToClipboardToolStripMenuItem_Click);
+            this.copyToClipboardToolStripMenuItem.Click += new System.EventHandler(this.CopyToClipboard);
             // 
             // toolStripMenuItem1
             // 
@@ -101,7 +101,7 @@
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitApplication);
             // 
             // listenerToolStripMenuItem
             // 
@@ -118,7 +118,7 @@
             this.startToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F12;
             this.startToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.startToolStripMenuItem.Text = "&Start";
-            this.startToolStripMenuItem.Click += new System.EventHandler(this.startToolStripMenuItem_Click);
+            this.startToolStripMenuItem.Click += new System.EventHandler(this.StartListener);
             // 
             // stopToolStripMenuItem
             // 
@@ -127,7 +127,7 @@
             this.stopToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F12;
             this.stopToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.stopToolStripMenuItem.Text = "&Stop";
-            this.stopToolStripMenuItem.Click += new System.EventHandler(this.stopToolStripMenuItem_Click);
+            this.stopToolStripMenuItem.Click += new System.EventHandler(this.StopListener);
             // 
             // helpToolStripMenuItem
             // 
@@ -151,7 +151,7 @@
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutToolStripMenuItem.Text = "Ab&out";
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.ShowAboutDialog);
             // 
             // StatusBar
             // 

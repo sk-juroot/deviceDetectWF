@@ -31,7 +31,7 @@ namespace deviceDetectWF
             StatusLabel.Text = DateTime.Now.ToString() + " " + status;
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ExitApplication(object sender, EventArgs e)
         {
             Application.Exit();
         }
@@ -88,7 +88,7 @@ namespace deviceDetectWF
             SetStatus("Snapshot captured");
         }
 
-        private void startToolStripMenuItem_Click(object sender, EventArgs e)
+        private void StartListener(object sender, EventArgs e)
         {
             startToolStripMenuItem.Enabled = false;
             startToolStripMenuItem.ShowShortcutKeys = false;
@@ -98,7 +98,7 @@ namespace deviceDetectWF
             this.running = true;
         }
 
-        private void stopToolStripMenuItem_Click(object sender, EventArgs e)
+        private void StopListener(object sender, EventArgs e)
         {
             running = false;
             SetStatus("Logging stopped");
@@ -108,13 +108,7 @@ namespace deviceDetectWF
             startToolStripMenuItem.ShowShortcutKeys = true;
         }
 
-        private void clearLogToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            TextBox.Clear();
-            SetStatus("Output cleared");
-        }
-
-        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ShowAboutDialog(object sender, EventArgs e)
         {
             About aboutForm = new About();
             aboutForm.ShowDialog();
@@ -165,7 +159,7 @@ namespace deviceDetectWF
             TextBox.AppendText("\n");
         }
 
-        private void saveToFileToolStripMenuItem_Click(object sender, EventArgs e)
+        private void SaveToFile(object sender, EventArgs e)
         {
             if (SaveDialog.ShowDialog() == DialogResult.OK)
             {
@@ -174,7 +168,7 @@ namespace deviceDetectWF
             }
         }
 
-        private void copyToClipboardToolStripMenuItem_Click(object sender, EventArgs e)
+        private void CopyToClipboard(object sender, EventArgs e)
         {
             TextBox.SelectAll();
             TextBox.Copy();
