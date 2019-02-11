@@ -147,7 +147,6 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="deviceDetectWF.ruleset" />
-    <None Include="deviceDetectWF_TemporaryKey.pfx" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
